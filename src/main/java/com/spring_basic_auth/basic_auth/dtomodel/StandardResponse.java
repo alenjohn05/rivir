@@ -19,6 +19,18 @@ public class StandardResponse<T> {
         this.message = message;
     }
 
+    public StandardResponse(boolean success, T data) {
+        this.success = success;
+        this.data = data;
+        this.timestamp = LocalDateTime.now().toString();
+    }
+
+    public StandardResponse(boolean success, String message) {
+        this.success = success;
+        this.message = message;
+        this.timestamp = LocalDateTime.now().toString();
+    }
+
     public boolean isSuccess() {
         return success;
     }

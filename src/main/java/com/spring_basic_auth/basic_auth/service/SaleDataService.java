@@ -22,8 +22,8 @@ public class SaleDataService {
     public Optional<Car> findById(int id){
         return carRepository.findById(id);
     }
-    public void save(Car car) {
-        carRepository.save(car);
+    public Car save(Car car) {
+        return carRepository.save(car);
     }
     public void deleteCarById(int id){
         carRepository.deleteById(id);
@@ -50,6 +50,9 @@ public class SaleDataService {
     }
     public void deleteAllSales(){
         salesRepository.deleteAll();
+    }
+    public Optional<Car> getCarById(int id){
+        return carRepository.findById(id);
     }
 
     public Sales createSale(SaleDTO saleDTO) {

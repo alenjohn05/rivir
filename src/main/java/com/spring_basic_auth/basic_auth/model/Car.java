@@ -26,7 +26,10 @@ public class Car {
     public Car() {
     }
 
-    public Car(String color, String drivetrain, int mpg, String transmission, String engine, String vin, String mileage) {
+    public Car( String city, String state, String color, String drivetrain, int mpg, String transmission, String engine, String vin, String mileage, BigDecimal price) {
+
+        this.city = city;
+        this.state = state;
         this.color = color;
         this.drivetrain = drivetrain;
         this.mpg = mpg;
@@ -34,7 +37,9 @@ public class Car {
         this.engine = engine;
         this.vin = vin;
         this.mileage = mileage;
+        this.price = price;
     }
+
 
     public int getListingId() {
         return listingId;
